@@ -1,0 +1,12 @@
+{
+  "extends": ["eslint:recommended", "next", "prettier", "next/core-web-vitals"],
+  "globals": {
+    "fetch": true,
+    "window": true,
+    "Promise": true,
+    "localStorage": true
+  },
+  "env": {
+    "node": true
+  }
+}

@@ -1,0 +1,69 @@
+.blog {
+  img {
+    width: 112px;
+    aspect-ratio: auto 112 / 112;
+    height: 112px;
+    object-fit: cover;
+  }
+  p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: rgba(41, 41, 41, 1);
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+
+%loading-skeleton {
+  color: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #eee;
+  border-color: #eee;
+
+  &::placeholder {
+    color: transparent;
+  }
+}
+@keyframes loading-skeleton {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.loading-skeleton {
+  pointer-events: none;
+  animation: loading-skeleton 1s infinite alternate;
+
+  img {
+    filter: grayscale(100) contrast(0%) brightness(1.8);
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li,
+  div,
+  .btn,
+  label,
+  .form-control {
+    @extend %loading-skeleton;
+  }
+}
+.show>.dropdown-menu {
+    display: block;
+    position: absolute;
+  }
+  
